@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "nama": "Seminar Nasional Teknologi 2026",
+    "kategori": "Akademik",
+    "tanggal": "20 Agustus 2026",
+    "lokasi": "Auditorium Utama Gedung Rektorat",
+    "status": "Buka Pendaftaran",
+    "deskripsi": "Pahami perkembangan kecerdasan buatan (AI) terbaru langsung bersama para praktisi dan ahli teknologi global."
+  },
+  {
+    "id": 2,
+    "nama": "Pekan Olahraga Mahasiswa (POM)",
+    "kategori": "Olahraga",
+    "tanggal": "05 September 2026",
+    "lokasi": "Stadion Utama Universitas",
+    "status": "Buka Pendaftaran",
+    "deskripsi": "Dukung perwakilan fakultasmu dalam ajang kompetisi olahraga paling bergengsi tahunan antar mahasiswa."
+  },
+  {
+    "id": 3,
+    "nama": "Festival Budaya Nusantara",
+    "kategori": "Seni & Budaya",
+    "tanggal": "18 Oktober 2026",
+    "lokasi": "Lapangan Terbuka Kampus Pusat",
+    "status": "Segera Buka",
+    "deskripsi": "Nikmati pagelaran seni tari, musik tradisional, dan pameran kuliner khas daerah dari seluruh Indonesia."
+  },
+  {
+    "id": 4,
+    "nama": "Latihan Keterampilan Manajemen Mahasiswa (LKMM)",
+    "kategori": "Organisasi & BEM",
+    "tanggal": "25 Juli 2026",
+    "lokasi": "Ruang Serbaguna Fakultas Hukum",
+    "status": "Pendaftaran Ditutup",
+    "deskripsi": "Pelatihan intensif untuk meningkatkan jiwa kepemimpinan, manajemen waktu, dan keorganisasian bagi pengurus BEM dan UKM."
+  },
+  {
+    "id": 5,
+    "nama": "Workshop UI/UX Design for Beginners",
+    "kategori": "Akademik",
+    "tanggal": "12 Agustus 2026",
+    "lokasi": "Laboratorium Komputer Terpadu",
+    "status": "Buka Pendaftaran",
+    "deskripsi": "Pelajari praktik terbaik dan dasar-dasar desain antarmuka pengguna (UI) serta pengalaman pengguna (UX) menggunakan Figma."
+  },
+  {
+    "id": 6,
+    "nama": "Lomba Paduan Suara Antar Fakultas",
+    "kategori": "Seni & Budaya",
+    "tanggal": "10 November 2026",
+    "lokasi": "Gedung Kesenian Mahasiswa",
+    "status": "Segera Buka",
+    "deskripsi": "Ajang unjuk bakat vokal dan harmonisasi antar grup paduan suara untuk memperebutkan piala bergilir Rektor."
+  }
+]
