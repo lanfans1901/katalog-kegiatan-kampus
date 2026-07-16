@@ -1,0 +1,95 @@
+:root {
+    --bs-primary: #0d6efd;
+    --bs-primary-hover: #0b5ed7;
+}
+body {
+    background-color: #f8f9fa;
+    color: #212529;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.hero-section {
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+    color: white;
+    padding: 4rem 1rem;
+    text-align: center;
+}
+.card-kegiatan {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.card-kegiatan:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+footer {
+    background-color: #212529;
+    color: #a8abbc;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+/* ===== Layout umum ===== */
+main {
+    scroll-margin-top: 70px;
+}
+section[id] {
+    scroll-margin-top: 80px;
+}
+
+/* ===== Card kegiatan ===== */
+.card-kegiatan .card-title {
+    line-height: 1.3;
+}
+
+/* ===== Form styling ===== */
+.form-label {
+    font-size: 0.9rem;
+}
+.form-control,
+.form-select {
+    border-radius: 0.5rem;
+    padding: 0.6rem 0.9rem;
+}
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+.input-group .form-control:focus {
+    box-shadow: none;
+}
+.input-group:focus-within {
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+    border-radius: 0.5rem;
+}
+
+/* ===== Tombol ===== */
+.btn {
+    border-radius: 0.5rem;
+}
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+.btn-primary:hover {
+    background-color: var(--bs-primary-hover);
+    transform: translateY(-1px);
+}
+.btn-outline-primary.disabled {
+    opacity: 0.55;
+}
+
+/* ===== Responsif ===== */
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 2.5rem 1rem;
+    }
+    .hero-section h1 {
+        font-size: 1.5rem;
+    }
+    footer .text-md-end {
+        text-align: center !important;
+    }
+}
