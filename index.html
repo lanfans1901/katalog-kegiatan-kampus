@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Kegiatan Kampus</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">
+                <i class="bi bi-mortarboard-fill me-2"></i>KKK
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <i class="bi bi-house-door-fill me-1"></i>Beranda
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kegiatan">
+                            <i class="bi bi-calendar-event-fill me-1"></i>Daftar Kegiatan
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pendaftaran">
+                            <i class="bi bi-pen-fill me-1"></i>Pendaftaran
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============ HERO / HEADER ============ -->
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="fw-bold"><i class="bi bi-mortarboard-fill me-2"></i>Katalog Kegiatan Kampus</h1>
+            <p class="lead text-white-50 mb-0">Temukan, ikuti, dan kembangkan potensimu melalui berbagai aktivitas seru di lingkungan kampus</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+
+        <!-- ============ PENCARIAN & FILTER ============ -->
+        <section class="card p-4 mb-5 shadow-sm border-0">
+            <h2 class="h4 mb-4 fw-bold border-start border-primary border-4 ps-2 text-dark">Cari &amp; Filter Kegiatan</h2>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="pencarian" class="form-label fw-semibold text-secondary">Kata Kunci</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border-end-0 text-muted"><i class="bi bi-search"></i></span>
+                        <input type="text" class="form-control border-start-0 ps-0" id="pencarian" placeholder="Cari berdasarkan nama atau deskripsi kegiatan...">
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <label for="kategori" class="form-label fw-semibold text-secondary">Kategori</label>
+                    <select id="kategori" class="form-select">
+                        <option value="Semua">Semua Kategori</option>
+                        <option value="Akademik">Akademik</option>
+                        <option value="Olahraga">Olahraga</option>
+                        <option value="Seni & Budaya">Seni & Budaya</option>
+                        <option value="Organisasi & BEM">Organisasi & BEM</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <label for="status" class="form-label fw-semibold text-secondary">Status</label>
+                    <select id="status" class="form-select">
+                        <option value="Semua">Semua Status</option>
+                        <option value="Buka Pendaftaran">Buka Pendaftaran</option>
+                        <option value="Segera Buka">Segera Buka</option>
+                        <option value="Pendaftaran Ditutup">Pendaftaran Ditutup</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ DAFTAR KEGIATAN ============ -->
+        <section id="kegiatan" class="mb-5">
+            <h2 class="h4 mb-4 fw-bold border-start border-primary border-4 ps-2 text-dark">Daftar Kegiatan Mendatang</h2>
+
+            <div id="kegiatan-container" class="row g-4">
+                <div class="col-12 text-center text-muted my-5">
+                    <div class="spinner-border text-primary" role="status"></div>
+                    <p class="mt-3">Memuat data kegiatan...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ FORM PENDAFTARAN ============ -->
+        <section id="pendaftaran" class="card p-4 shadow-sm border-0 bg-white">
+            <h2 class="h4 mb-2 fw-bold border-start border-primary border-4 ps-2 text-dark">Formulir Pendaftaran Kegiatan</h2>
+            <p class="text-muted mb-4 small" id="form-subtitle">Isi data diri Anda dengan benar untuk mendaftar pada kegiatan yang dipilih.</p>
+
+            <div id="alert-sukses" class="alert alert-success d-none" role="alert">
+                <h4 class="alert-heading fw-bold"><i class="bi bi-check-circle-fill me-2"></i>Pendaftaran Berhasil!</h4>
+                <p class="mb-0">Terima kasih, data Anda telah kami terima. Silakan cek email kampus Anda secara berkala untuk informasi kelanjutan kegiatan.</p>
+                <hr>
+                <button id="btn-daftar-lagi" type="button" class="btn btn-sm btn-success">Daftar Kegiatan Lain</button>
+            </div>
+
+            <form id="form-pendaftaran" novalidate>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="nama" class="form-label fw-semibold text-secondary">Nama Lengkap</label>
+                        <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+                        <div class="invalid-feedback">Nama lengkap wajib diisi.</div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="nim" class="form-label fw-semibold text-secondary">NIM</label>
+                        <input type="text" inputmode="numeric" pattern="[0-9]+" class="form-control" id="nim" name="nim" placeholder="Hanya angka, contoh: 220101234" required>
+                        <div class="invalid-feedback">NIM wajib diisi dengan format angka.</div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="email" class="form-label fw-semibold text-secondary">Email Kampus</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="nama@mahasiswa.ac.id" required>
+                        <div class="invalid-feedback">Masukkan format email yang valid (mengandung @).</div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="nohp" class="form-label fw-semibold text-secondary">Nomor HP / WA</label>
+                        <input type="tel" inputmode="numeric" pattern="[0-9]{9,15}" class="form-control" id="nohp" name="nohp" placeholder="Contoh: 081234567890" required>
+                        <div class="invalid-feedback">Nomor HP wajib diisi (9-15 digit angka).</div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <label for="pilihan-kegiatan" class="form-label fw-semibold text-secondary">Pilih Kegiatan</label>
+                        <select id="pilihan-kegiatan" class="form-select" name="kegiatan_dipilih" required>
+                            <option value="">-- Pilih Kegiatan --</option>
+                        </select>
+                        <div class="invalid-feedback">Silakan pilih salah satu kegiatan.</div>
+                    </div>
+
+                    <div class="col-12 mt-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="persetujuan" required>
+                            <label class="form-check-label text-secondary small" for="persetujuan">
+                                Saya menyatakan bahwa data yang diisi adalah benar, dan saya bersedia mengikuti tata tertib kegiatan.
+                            </label>
+                            <div class="invalid-feedback">Anda harus menyetujui pernyataan ini sebelum mendaftar.</div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mt-4">
+                        <button type="submit" class="btn btn-primary px-5 py-2 fw-bold shadow-sm w-100 w-sm-auto">
+                            <i class="bi bi-send-fill me-2"></i>Kirim Pendaftaran
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="text-center text-md-start">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <h5 class="fw-bold text-white mb-2">Katalog Kegiatan Kampus</h5>
+                    <p class="small mb-0">&copy; 2026 Biro Kemahasiswaan. Hak Cipta Dilindungi.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="small mb-1"><i class="bi bi-envelope-fill me-2"></i>kemahasiswaan@kampus.ac.id</p>
+                    <p class="small mb-0"><i class="bi bi-geo-alt-fill me-2"></i>Gedung Rektorat Lt. 2, Sayap Barat</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
